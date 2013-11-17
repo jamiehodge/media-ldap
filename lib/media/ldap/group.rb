@@ -39,8 +39,7 @@ module Media
         {
           id: id,
           name: name,
-          updated_at: updated_at.httpdate,
-          person_ids: person_ids
+          updated_at: updated_at.httpdate
         }
       end
 
