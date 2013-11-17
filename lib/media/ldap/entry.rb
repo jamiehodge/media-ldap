@@ -14,11 +14,11 @@ module Media
 
         pool.with do |connection|
 
-          connection.search(
+          Array(connection.search(
             base: base,
             filter: filter(query),
             attributes: attributes
-          ).map {|entry| new(entry) }
+          )).map {|entry| new(entry) }
         end
       rescue Timeout::Error
         []
