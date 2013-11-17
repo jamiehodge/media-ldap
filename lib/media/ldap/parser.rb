@@ -4,8 +4,7 @@ module Media
       extend self
 
       def parse(value)
-        result = Array(value).first
-        result.force_encoding("UTF-8") if result
+        Array(value).first
       end
     end
   end
