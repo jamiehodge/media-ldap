@@ -10,7 +10,7 @@ module Media
       end
 
       def search(query)
-        return [] if query.empty?
+        return [] if query.to_s.empty?
 
         pool.with do |connection|
 
